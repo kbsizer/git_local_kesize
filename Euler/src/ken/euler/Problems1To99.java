@@ -10,10 +10,10 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class Problems1To9 {
+public class Problems1To99 {
 
 	@Test
-	public void p1_MultiplesOf3And5() {
+	public void p01_MultiplesOf3And5() {
 		int sum = 0;
 		for (int i = 1; i < 1000; i++) {
 			if ((i % 3 == 0) || (i % 5 == 0)) {
@@ -25,7 +25,7 @@ public class Problems1To9 {
 	}
 
 	@Test
-	public void p2_EvenFibonacciNumbers() {
+	public void p02_EvenFibonacciNumbers() {
 		Fibonacci f = new Fibonacci();
 		int sum = 0;
 		int nextFib = f.next();
@@ -53,7 +53,7 @@ public class Problems1To9 {
 	}
 
 	@Test
-	public void p3_LargestPrimeFactor() {
+	public void p03_LargestPrimeFactor() {
 		long num = 600851475143L;
 		long largestFactor = 0;
 		PrimeFactory primes = new PrimeFactory();
@@ -100,7 +100,7 @@ public class Problems1To9 {
 	 * Find the largest palindrome made from the product of two 3-digit numbers.
 	 */
 	@Test
-	public void p4_LargestPalindromeProduct() {
+	public void p04_LargestPalindromeProduct() {
 		int largestPalindrome = 0;
 		for (int a = 999; a >= 100; a--) {
 			for (int b = 999; b >= 100; b--) {
@@ -137,7 +137,7 @@ public class Problems1To9 {
 	 * the numbers from 1 to 20?
 	 */
 	@Test
-	public void p5_SmallestMultiple() {
+	public void p05_SmallestMultiple() {
 		int smallestMultiple = 2520; // may as well start here (from problem
 										// text above)
 		while (canBeDividedByAll(smallestMultiple) == false) {
@@ -175,7 +175,7 @@ public class Problems1To9 {
 	 * hundred natural numbers and the square of the sum.
 	 */
 	@Test
-	public void p6_SumSquareDifference() {
+	public void p06_SumSquareDifference() {
 		long sumOfSquares = 0;
 		long sum = 0;
 		for (long i = 1; i <= 100; i++) {
@@ -194,7 +194,7 @@ public class Problems1To9 {
 	 * What is the 10,001st prime number?
 	 */
 	@Test
-	public void p7_10001stPrime() {
+	public void p07_10001stPrime() {
 		long prime = 1L;
 		;
 		PrimeFactory primes = new PrimeFactory();
@@ -235,7 +235,7 @@ public class Problems1To9 {
 	 * Note: If the nth digit is a zero, then we can skip ahead 5 digits.
 	 */
 	@Test
-	public void p8_LargestProductInSeries() {
+	public void p08_LargestProductInSeries() {
 		String s = "73167176531330624919225119674426574742355349194934"
 				+ "96983520312774506326239578318016984801869478851843"
 				+ "85861560789112949495459501737958331952853208805511"
@@ -293,7 +293,7 @@ public class Problems1To9 {
 	 * Find the product abc.
 	 */
 	@Test
-	public void p9_SpecialPythagoreanTriplet() {
+	public void p09_SpecialPythagoreanTriplet() {
 		int answer = 0;
 		for ( int c=1000/3;c<1000;c++) {
 			for (int b=2;b<c && 1000-b-c > 0;b++) {
